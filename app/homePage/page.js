@@ -1,8 +1,22 @@
-import React from "react";
+"use client"
+import React, { useMemo, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Link from "next/link";
+import axios from "axios";
 
-export const ShopDiamondShape = ({shapeData}) => {
+export const ShopDiamondShape = () => {
+  const [shapeData, setShapeData] = useState([]);
+
+  useMemo(() => {
+    axios
+      .get(`http://ec2-3-18-62-57.us-east-2.compute.amazonaws.com/admin/api/v1/diamondshape`)
+      .then((res) => {
+        setShapeData(res.data.data);
+      })
+      .catch(() => {
+        console.log("API error");
+      });
+  }, []);
   return (
     <>
       <div className="ShopDiamondShape">

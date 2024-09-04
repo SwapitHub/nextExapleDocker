@@ -1,7 +1,9 @@
 'use client'
 
-import TopicsList from "@/components/TopicsList";
+import { ShopDiamondShape } from "./homePage/page";
+
+
 
 export default function Home() {
-  return <TopicsList />;
+  return <ShopDiamondShape />;
 }
