@@ -1,17 +1,14 @@
 "use client"; 
 import axios from "axios";
-import { useEffect, useMemo, useState } from "react";
-import  {Banner}  from "../Banner";
-import { ShopDiamondShape } from "../ShopDiamondShape";
-import { SeeProducts } from "../SeeProducts";
-import { ShopDiamondCotegory } from "../ShopDiamondCotegory";
-import { BridalJewellery } from "../BridalJewellery";
+import { useMemo, useState } from "react";
 import { AnniversaryRings } from "../AnniversaryRings";
+import { Banner } from "../Banner";
+import { BridalJewellery } from "../BridalJewellery";
 import { CelebarteLove } from "../CelebarteLove";
-import { WeddingCollection } from "../WeddingCollection";
 import { EngagementBridal } from "../EngagementBridal";
 import LoveBrilliance from "../LoveBrilliance";
-import { AnniversaryRingFeatured } from "../AnniversaryRingFeatured";
+import { ShopDiamondCotegory } from "../ShopDiamondCotegory";
+import { ShopDiamondShape } from "../ShopDiamondShape";
 
 export const HomePage = () => {
   const [shapeData, setShapeData] = useState([]);
@@ -185,18 +182,15 @@ export const HomePage = () => {
       <div className="home-page">
         <Banner homeContext={homeContext}/>
         <ShopDiamondShape shapeData={shapeData} />
-        <SeeProducts anniversaryRings={anniversaryRings} diamondPendants={diamondPendants} tennisBracelets={tennisBracelets} diamondStuds={diamondStuds}/>
         <ShopDiamondCotegory shopStyle={shopStyle}/>
         <BridalJewellery home={homeAllSections}/>
         <AnniversaryRings/>
         <CelebarteLove home={homeAllSections}/>
-        <WeddingCollection engagementRings={engagementRings} weddingJewelry={weddingJewelry} weddingCollection={weddingCollection}/>
 
         <EngagementBridal home={homeAllSections}/>
 
         <LoveBrilliance home={homeAllSections}/>
         
-        <AnniversaryRingFeatured home={homeAllSections}/>
       </div>
     </>
   );
