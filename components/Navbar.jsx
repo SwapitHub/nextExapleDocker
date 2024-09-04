@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { HomePage } from "./homePages/home/page";
 
 export default function Navbar() {
   return (
@@ -12,7 +11,6 @@ export default function Navbar() {
       
       <Link className="text-white font-bold" href="/">
         Integration Ninjas
-        <HomePage/>
       </Link>
     
     </nav>
